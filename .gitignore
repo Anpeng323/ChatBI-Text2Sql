@@ -1,0 +1,25 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+backend/.venv/
+*.egg-info/
+.pytest_cache/
+
+# ---- 真实密钥：切勿提交 ----
+backend/.env
+
+# ---- Node / 前端 ----
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ---- 日志 / 临时 ----
+*.log
+.DS_Store
+charts/
+
+# ---- 项目内部数据（含对话/记忆，勿发布） ----
+.codebuddy/
+
+# ---- 不发布的旧 Demo 脚本 ----
+langgraph_ticket_bot.py

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 12% -10%, rgba(20, 184, 166, 0.12), transparent 60%),
+    radial-gradient(1000px 500px at 100% 0%, rgba(167, 139, 250, 0.14), transparent 55%),
+    radial-gradient(900px 600px at 50% 120%, rgba(37, 99, 235, 0.12), transparent 60%),
+    #0b1220;
+  color: #e2e8f0;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  font-size: 14px;
+}
+
+@layer components {
+  .glass {
+    @apply bg-ink-800/70 backdrop-blur-xl border border-white/5;
+  }
+  .glass-soft {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/5;
+  }
+  .gradient-title {
+    background: linear-gradient(120deg, #14b8a6 0%, #2563eb 55%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: #24314f;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2c3a5c;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 灯箱 */
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(3, 7, 18, 0.9);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lb-overlay img {
+  max-width: 94vw;
+  max-height: 94vh;
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
